@@ -1,4 +1,7 @@
 ﻿@model IEnumerable<string>
+@{
+    var errorMessage = ViewBag.ErrorMessage as string;
+}
 
 <!DOCTYPE html>
 <html>
@@ -23,7 +26,21 @@
     </style>
 </head>
 <body>
-    <h1>Image Gallery</h1>
+    <div>
+        <h1>Image Gallery</h1>
+        <h6>All images are displayed using Shared Access Signature for Azure Storage Conatiner. Container SAS must have List and Read permissions.</h6>
+    </div>
+   
+
+    @if (!string.IsNullOrWhiteSpace(errorMessage))
+    {
+        <div style="color: red; border: 1px solid red; padding: 10px;">
+            <strong>Error:</strong> @errorMessage
+        </div>
+    }
+    else
+    {
+
     <table>
         <tr>
             @* Start a new row after every 4 images *@
@@ -46,5 +63,6 @@
    
     
     </table>
+    }
 </body>
 </html>
