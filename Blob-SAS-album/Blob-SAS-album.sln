@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blob-SAS-album", "Blob-SAS-album\Blob-SAS-album.csproj", "{ACB94002-D288-436A-BF91-F03C9D8F55E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACB94002-D288-436A-BF91-F03C9D8F55E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB94002-D288-436A-BF91-F03C9D8F55E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB94002-D288-436A-BF91-F03C9D8F55E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB94002-D288-436A-BF91-F03C9D8F55E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {475F4271-3697-48BB-A5DA-3780ABE82AB2}
+	EndGlobalSection
+EndGlobal

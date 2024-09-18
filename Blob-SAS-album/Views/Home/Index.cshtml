@@ -1,0 +1,19 @@
+﻿@model IEnumerable<string>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Album</title>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div>
+        @foreach (var imageUrl in Model)
+        {
+            <div>
+                <img src="@imageUrl" alt="Image" style="max-width: 100%; height: auto;" />
+            </div>
+        }
+    </div>
+</body>
+</html>
