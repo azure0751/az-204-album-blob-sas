@@ -4,16 +4,47 @@
 <html>
 <head>
     <title>Album</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        img {
+            max-width: 150px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <h1>Image Gallery</h1>
-    <div>
-        @foreach (var imageUrl in Model)
-        {
-            <div>
-                <img src="@imageUrl" alt="Image" style="max-width: 100%; height: auto;" />
-            </div>
-        }
-    </div>
+    <table>
+        <tr>
+            @* Start a new row after every 4 images *@
+            @foreach (var imageUrl in Model.Select((value, index) => new { value, index }))
+            
+            {
+                if (imageUrl.index % 4 == 0 && imageUrl.index != 0)
+                {
+                <tr></tr>
+                    
+                 } <!-- This closing curly brace was missing -->
+
+                <td>
+                    <img src="@imageUrl.value" alt="Image" />
+                </td>
+            }
+        
+
+        </tr> <!-- Close the last row -->
+   
+    
+    </table>
 </body>
 </html>
